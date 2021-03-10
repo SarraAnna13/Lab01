@@ -53,8 +53,9 @@ public class FXMLController {
     
     @FXML
     void doCancella(ActionEvent event)
-    { //String s= txtResult.getSelectedText();
-    
+    { String s= txtResult.getSelectedText();
+      elencolinkedlist.cancella(s);
+      txtResult.setText(elencolinkedlist.toString());
     }
     
     

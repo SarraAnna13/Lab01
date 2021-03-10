@@ -1,6 +1,9 @@
 package it.polito.tdp.parole.model;
 
 import java.util.Collections;
+
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_ADDPeer;
+
 import java.util.*;
 
 
@@ -26,8 +29,10 @@ public class ParoleLinkedList {
 
 	
 	public void cancella(String s)
-	{//for(String ss: elencoparole) if(ss.compareTo(s)==0) elencoparole.re
-		
+	{for(Iterator <String>i=elencoparole.iterator(); i.hasNext();) 
+		{String ss=i.next();
+		if(ss.compareTo(s)==0) i.remove();	 
+		}
 	}
 	
 	
