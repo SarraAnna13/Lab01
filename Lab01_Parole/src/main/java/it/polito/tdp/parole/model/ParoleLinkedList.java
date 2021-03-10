@@ -22,9 +22,15 @@ public class ParoleLinkedList {
 	
 	public void reset() {
 	elencoparole=new LinkedList <String>();
-		
 	}
 
+	
+	public void cancella(String s)
+	{//for(String ss: elencoparole) if(ss.compareTo(s)==0) elencoparole.re
+		
+	}
+	
+	
 	@Override
 	public String toString() {
 	String s="";

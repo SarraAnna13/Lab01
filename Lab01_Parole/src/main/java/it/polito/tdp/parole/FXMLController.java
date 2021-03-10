@@ -1,5 +1,6 @@
 package it.polito.tdp.parole;
 
+
 import it.polito.tdp.parole.model.ParoleLinkedList;
 
 import java.net.URL;
@@ -12,7 +13,8 @@ import javafx.scene.control.TextField;
 
 public class FXMLController {
 	
-	ParoleLinkedList elenco ;
+	ParoleLinkedList elencolinkedlist ;
+	
 	String parola;
 
     @FXML
@@ -36,17 +38,26 @@ public class FXMLController {
     @FXML
     void doInsert(ActionEvent event) {
     parola= this.txtParola.getText();
-    elenco.addParola(parola);
-    this.txtResult.setText(elenco.toString());
+    elencolinkedlist.addParola(parola);
+   
+    this.txtResult.setText(elencolinkedlist.toString());
     txtParola.setText("");
     }
 
     @FXML
     void doReset(ActionEvent event) {
-    elenco.reset();
-    txtResult.setText(elenco.toString());
+    elencolinkedlist.reset();
+  
+    txtResult.setText(elencolinkedlist.toString());
     }
-
+    
+    @FXML
+    void doCancella(ActionEvent event)
+    { //String s= txtResult.getSelectedText();
+    
+    }
+    
+    
     @FXML
     void initialize() {
         assert txtParola != null : "fx:id=\"txtParola\" was not injected: check your FXML file 'Scene.fxml'.";
@@ -54,6 +65,7 @@ public class FXMLController {
         assert txtResult != null : "fx:id=\"txtResult\" was not injected: check your FXML file 'Scene.fxml'.";
         assert btnReset != null : "fx:id=\"btnReset\" was not injected: check your FXML file 'Scene.fxml'.";
 
-        elenco = new ParoleLinkedList() ;
+        elencolinkedlist = new ParoleLinkedList() ;
+        
     }
 }
